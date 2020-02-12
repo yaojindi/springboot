@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lianxi.Dao.IdeptDao">
+
+
+
+    <select id="selectlsit" resultType="com.lianxi.Model.Dept">
+		select * from Dept
+	</select>
+
+	<select id="selectone" resultType="com.lianxi.Model.Dept">
+		select * from Dept where  did=#{did}
+	</select>
+
+	<delete id="deleteone">
+		delete from Dept where  did=#{did}
+	</delete>
+
+	<update id="updateone">
+		update Dept set dname=#{dname},dsex=#{dsex} where did=#{did}
+	</update>
+
+</mapper>
