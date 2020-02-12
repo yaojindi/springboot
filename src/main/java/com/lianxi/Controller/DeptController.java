@@ -21,14 +21,14 @@ public class DeptController {
 
     @RequestMapping("/insert")
     @ResponseBody
-    public String isnert(Dept dd){
+    public int isnert(Dept dd){
         try {
             ids.insert(dd);
-            return "录入成功";
+            return 1;
         } catch (Exception e) {
             e.printStackTrace();
         }
-            return "录入失败";
+            return 0;
     }
     @RequestMapping("/selectlist")
     @ResponseBody
@@ -68,14 +68,14 @@ public class DeptController {
     }
     @RequestMapping("/updateone")
     @ResponseBody
-    public String updateone(Dept dd){
+    public int updateone(Dept dd){
         try {
             ids.updateone(dd);
-            return "已修改";
+            return 1;
         } catch (Exception e) {
             e.printStackTrace();
         }
-            return "未修改";
+            return 0;
     }
 
 }
