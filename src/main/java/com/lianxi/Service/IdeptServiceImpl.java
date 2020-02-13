@@ -15,6 +15,7 @@ public class IdeptServiceImpl implements IdeptService {
 
     @Override
     public void insert(Dept dd) {
+
         idao.insert(dd);
     }
 
