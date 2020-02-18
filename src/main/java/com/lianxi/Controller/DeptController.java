@@ -60,11 +60,11 @@ public class DeptController {
     public String deleteone(Integer did){
         try {
             ids.deleteone(did);
-            return "ok";
+            return "1";
         } catch (Exception e) {
             e.printStackTrace();
         }
-            return "no";
+            return "0";
     }
     @RequestMapping("/updateone")
     @ResponseBody
